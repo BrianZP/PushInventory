@@ -88,9 +88,6 @@ class Main extends PluginBase implements Listener{
 		}
 		if($i->getID() === $this->getConfig()->get("slot6")){
 			$p->getServer()->dispatchCommand(new ConsoleCommandSender(), str_ireplace("{PLAYER}", $p->getName(), $this->getConfig()->get("slot6-command")));
-			if($this->getConfig()->get("ClearItemsAfterUse") === true){
-          				$p->getInventory()->clearAll();	
-          			}
           			
 		}
 		}
