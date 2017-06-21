@@ -39,18 +39,9 @@ class Main extends PluginBase implements Listener{
           		}
           		if($item->getID() === $this->getConfig()->get("slot3")){
           			$player->sendPopup($this->getConfig()->get("slot3-Tip"));
-          		}
-          		if($item->getID() === $this->getConfig()->get("slot4")){
-          			$player->sendPopup($this->getConfig()->get("slot4-Tip"));
-          		}
-          		if($item->getID() === $this->getConfig()->get("slot5")){
-          			$player->sendPopup($this->getConfig()->get("slot5-Tip"));
-          		}
-			if($item->getID() === $this->getConfig()->get("slot6")){
-          			$player->sendPopup($this->getConfig()->get("slot6-Tip"));
-          		}
-		 }
-        	 }
+			}
+			}
+		}
    	}
 	public function onPlayerInteract(PlayerInteractEvent $event){
 		$p = $event->getPlayer();
@@ -72,23 +63,7 @@ class Main extends PluginBase implements Listener{
 			$p->getServer()->dispatchCommand(new ConsoleCommandSender(), str_ireplace("{PLAYER}", $p->getName(), $this->getConfig()->get("slot3-command")));
 			if($this->getConfig()->get("ClearItemsAfterUse") === true){
           				$p->getInventory()->clearAll();	
-          			}
-		}
-		if($i->getID() === $this->getConfig()->get("slot4")){
-			$p->getServer()->dispatchCommand(new ConsoleCommandSender(), str_ireplace("{PLAYER}", $p->getName(), $this->getConfig()->get("slot4-command")));
-			if($this->getConfig()->get("ClearItemsAfterUse") === true){
-          				$p->getInventory()->clearAll();	
-          			}
-		}
-		if($i->getID() === $this->getConfig()->get("slot5")){
-			$p->getServer()->dispatchCommand(new ConsoleCommandSender(), str_ireplace("{PLAYER}", $p->getName(), $this->getConfig()->get("slot5-command")));
-			if($this->getConfig()->get("ClearItemsAfterUse") === true){
-          				$p->getInventory()->clearAll();	
-          			}
-		}
-		if($i->getID() === $this->getConfig()->get("slot6")){
-			$p->getServer()->dispatchCommand(new ConsoleCommandSender(), str_ireplace("{PLAYER}", $p->getName(), $this->getConfig()->get("slot6-command")));
-          			
+			}
 		}
 		}
 	}
@@ -101,12 +76,6 @@ class Main extends PluginBase implements Listener{
 			$p->getInventory()->setHotbarSlotIndex(2,2);
 			$p->getInventory()->setItem(3, Item::get($this->getConfig()->get("slot3"),0,1));
 			$p->getInventory()->setHotbarSlotIndex(3,3);
-			$p->getInventory()->setItem(4, Item::get($this->getConfig()->get("slot4"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(4,4);
-			$p->getInventory()->setItem(5, Item::get($this->getConfig()->get("slot5"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(5,5);
-			$p->getInventory()->setItem(6, Item::get($this->getConfig()->get("slot6"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(6,6);
 		}
 	}
 	public function onRespawn(PlayerRespawnEvent $event){
@@ -118,12 +87,6 @@ class Main extends PluginBase implements Listener{
 			$p->getInventory()->setHotbarSlotIndex(2,2);
 			$p->getInventory()->setItem(3, Item::get($this->getConfig()->get("slot3"),0,1));
 			$p->getInventory()->setHotbarSlotIndex(3,3);
-			$p->getInventory()->setItem(4, Item::get($this->getConfig()->get("slot4"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(4,4);
-			$p->getInventory()->setItem(5, Item::get($this->getConfig()->get("slot5"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(5,5);
-			$p->getInventory()->setItem(6, Item::get($this->getConfig()->get("slot6"),0,1));
-			$p->getInventory()->setHotbarSlotIndex(6,6);
 		}
 	}
 	 public function onWorldChange(EntityLevelChangeEvent $event){
@@ -141,13 +104,7 @@ class Main extends PluginBase implements Listener{
 			$entity->getInventory()->setHotbarSlotIndex(2,2);
 			$entity->getInventory()->setItem(3, Item::get($this->getConfig()->get("slot3"),0,1));
 			$entity->getInventory()->setHotbarSlotIndex(3,3);
-			$entity->getInventory()->setItem(4, Item::get($this->getConfig()->get("slot4"),0,1));
-			$entity->getInventory()->setHotbarSlotIndex(4,4);
-			$entity->getInventory()->setItem(5, Item::get($this->getConfig()->get("slot5"),0,1));
-			$entity->getInventory()->setHotbarSlotIndex(5,5);
-			$entity->getInventory()->setItem(6, Item::get($this->getConfig()->get("slot6"),0,1));
-			$entity->getInventory()->setHotbarSlotIndex(6,6);
-    		}
-    	}
-    }
+		}
+	}
+	}
 }
