@@ -1,30 +1,33 @@
 #settings
 GiveItemsOnJoin: true
-GiveItemsOnRespawn: true
-ClearItemsAfterUse: true
+GiveItemsOnRespawn: false
+ClearItemsAfterUse: false
 workingworlds:
+- Spawn
 - Lobby
+- Survival
+- Prison
 #please dont add more slots
-slot1: 267
-slot1-Tip: §6Tap on the ground to go to PvP Games!
-slot1-command: rca {PLAYER} transfer 3
+slot1: 340
+slot1-Tip: §l§o§eH§fC §aRules
+slot1-command: rca {PLAYER} principle
 
 slot2: 256
-slot2-Tip: §6Tap on the ground to go to Spleef!
-slot2-command: rca {PLAYER} transfer 5
+slot2-Tip: §l§o§eInfo §aVOTE
+slot2-command: tell {PLAYER} §aVote on §eheaventeck.tk §afor cool prizes and access to §dKit Voter!!
 
 slot3: 261
-slot3-Tip: §6Tap on the ground to go to Skywars!
-slot3-command: rca {PLAYER} transfer 3
+slot3-Tip: §l§o§eInfo §aDONATE
+slot3-command: tell {PLAYER} §aHead over here to buy awesome ranks with huge perks. §emcpehc.buycraft.net
 
 slot4: 1
-slot4-Tip: §6Tap on the ground to go to MyPlot!
-slot4-command: rca {PLAYER} transfer 2
+slot4-Tip: 
+slot4-command:
 
 slot5: 296
-slot5-Tip: §6Tap on the ground to go to SurvivalGames!
-slot5-command: rca {PLAYER} transfer 4
+slot5-Tip: 
+slot5-command: 
 
 slot6: 339
-slot6-Tip: §6Tap on the ground to see your money!
-slot6-command: rca {PLAYER} mymoney
+slot6-Tip: 
+slot6-command: 
